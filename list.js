@@ -8,7 +8,7 @@ function addTask() {
     }
     const newTask = document.createElement("li");
     const taskText = document.createElement("span");    // for edit function   
-    taskText.textContent = input.value;
+    taskText.textContent = input.value.trim();
     newTask.appendChild(taskText);
 
     const listButtons = document.createElement("div");
@@ -21,15 +21,15 @@ function addTask() {
         editTask(taskText);
     };
 
-    const deleteButton = document.createElement("button");
-    deleteButton.className = "delete-button";
-    deleteButton.textContent = "Delete";
-    deleteButton.onclick = function () {
-        deleteTask(newTask);
+    const doneButton = document.createElement("button");
+    doneButton.className = "done-button";
+    doneButton.textContent = "Done";
+    doneButton.onclick = function () {
+        doneTask(newTask);
     };
 
     listButtons.appendChild(editButton);
-    listButtons.appendChild(deleteButton);
+    listButtons.appendChild(doneButton);
 
     newTask.appendChild(listButtons);
 
@@ -45,10 +45,10 @@ function editTask(taskText) {
         return;
     }
 
-    taskText.textContent = editedText;
+    taskText.textContent = editedText.trim();
 }
 
-function deleteTask(task) {
+function doneTask(task) {
     task.remove();
 }
 
