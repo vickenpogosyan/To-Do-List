@@ -7,16 +7,17 @@
 body {
     min-height: 100vh;
     padding: 10px;
-    background: linear-gradient(to bottom left, rgb(145, 95, 95), rgb(60, 25, 25));
+    background: rgb(70, 65, 65);
 }
 
 #container {
     width: 100%;
-    max-width: 550px;
+    max-width: 575px;
     margin: 100px auto;
     padding: 40px 30px;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 15px;
-    background-color: rgb(170, 155, 60);
+    background-color: rgb(170, 155, 65);
     text-align: center;
 }
 
@@ -30,14 +31,15 @@ h1 {
     margin: 30px 10px;
     padding-left: 5px;
     border-radius: 30px;
-    background-color: rgb(165, 150, 55);
+    background-color: rgb(165, 150, 60);
 }
 
 #input {
     flex: 1;    /* take up remaining space */
+    min-width: 0;
+    padding: 10px;
     border: none;
     outline: none;
-    padding: 10px;
     background: transparent;
     font-size: 16px;
 }
@@ -47,20 +49,20 @@ h1 {
 }
 
 #add-button {
+    padding: 15px 41px;
     border: none;
-    padding: 15px 40px;
     border-radius: 30px;
-    background-color: rgb(135, 45, 45);
+    background-color: rgb(140, 35, 35);
     font-size: 16px;
     cursor: pointer;
 }
 
 #add-button:hover {
-    background-color: rgb(145, 45, 45);
+    background-color: rgb(150, 35, 35);
 }
 
 #add-button:active {
-    background-color: rgb(155, 45, 45);
+    background-color: rgb(160, 35, 35);
 }
 
 ul li {
@@ -70,20 +72,20 @@ ul li {
     margin: 0 10px 10px;
     padding-left: 15px;
     border-radius: 30px;
-    background-color: rgb(165, 150, 55);
+    background-color: rgb(165, 150, 60);
     font-size: 16px;
     text-align: left;
 }
 
 .list-buttons {
-    margin-left: auto;    /* move unused space to the left - buttons get pushed to the right */
     display: flex;
+    margin-left: auto;    /* move unused space to the left - buttons get pushed to the right */
     gap: 5px;
 }
 
 .edit-button {
-    border: none;
     padding: 7.5px 10px;
+    border: none;
     border-radius: 30px;
     background-color: rgb(175, 100, 0);
     font-size: 16px;
@@ -91,26 +93,26 @@ ul li {
 }
 
 .edit-button:hover {
-    background-color: rgb(185, 100, 0);
+    background-color: rgb(180, 105, 0);
 }
 
 .edit-button:active {
-    background-color: rgb(195, 100, 0);
+    background-color: rgb(185, 110, 0);
 }
 
 .done-button {
-    border: none;
     padding: 7.5px 10px;
+    border: none;
     border-radius: 30px;
-    background-color: rgb(0, 145, 35);
+    background-color: rgb(0, 140, 35);
     font-size: 16px;
     cursor: pointer;
 }
 
 .done-button:hover {
-    background-color: rgb(0, 150, 35);
+    background-color: rgb(0, 145, 40);
 }
 
 .done-button:active {
-    background-color: rgb(0, 155, 35);
+    background-color: rgb(0, 150, 45);
 }

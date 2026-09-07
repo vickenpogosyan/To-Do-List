@@ -17,16 +17,10 @@ function addTask() {
     const editButton = document.createElement("button");
     editButton.className = "edit-button";
     editButton.textContent = "Edit";
-    editButton.onclick = function () {
-        editTask(taskText);
-    };
 
     const doneButton = document.createElement("button");
     doneButton.className = "done-button";
     doneButton.textContent = "Done";
-    doneButton.onclick = function () {
-        doneTask(newTask);
-    };
 
     listButtons.appendChild(editButton);
     listButtons.appendChild(doneButton);
@@ -36,20 +30,8 @@ function addTask() {
     list.appendChild(newTask);
 
     input.value = "";
-}
 
-function editTask(taskText) {
-    const editedText = prompt("Edit your task:", taskText.textContent);
-
-    if (editedText === null || editedText.trim() === "") {
-        return;
-    }
-
-    taskText.textContent = editedText.trim();
-}
-
-function doneTask(task) {
-    task.remove();
+    saveList();
 }
 
 input.addEventListener("keydown", function (event) {
@@ -57,3 +39,42 @@ input.addEventListener("keydown", function (event) {
         addTask();
     }
 });
+
+list.addEventListener("click", function (event) {
+    if (event.target.className === "edit-button") {
+        const task = event.target.closest("li");
+        const taskText = task.querySelector("span");
+        editTask(taskText);
+    }
+    if (event.target.className === "done-button") {
+        const task = event.target.closest("li");
+        doneTask(task);
+    }
+});
+
+function editTask(taskText) {
+    const editedText = prompt("Edit your task:", taskText.textContent);
+
+    if (editedText === null || editedText.trim() === "") {
+        return;
+    }
+    taskText.textContent = editedText.trim();
+
+    saveList();
+}
+
+function doneTask(task) {
+    task.remove();
+
+    saveList();
+}
+
+function saveList() {
+    localStorage.setItem("savedList", list.innerHTML);
+}
+
+function loadList() {
+    list.innerHTML = localStorage.getItem("savedList") || "";
+}
+
+loadList();
