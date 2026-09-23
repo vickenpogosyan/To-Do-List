@@ -8,7 +8,7 @@
 body {
     min-height: 100vh;
     padding: 10px;
-    background: rgb(70, 65, 65);
+    background-color: rgb(70, 65, 65);
 }
 
 #container {
@@ -18,7 +18,7 @@ body {
     padding: 40px 30px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    background-color: rgb(175, 150, 60);
+    background-color: rgb(170, 145, 55);
     text-align: center;
 }
 
@@ -29,10 +29,10 @@ h1 {
 #input-row {
     display: flex;
     align-items: center;
-    margin: 30px 10px;
+    margin: 30px 20px;
     padding-left: 5px;
     border-radius: 30px;
-    background-color: rgb(170, 145, 55);
+    background-color: rgb(165, 140, 50);
 }
 
 #input {
@@ -53,27 +53,27 @@ h1 {
     padding: 15px 41.5px;
     border: none;
     border-radius: 30px;
-    background-color: rgb(145, 35, 35);
+    background-color: rgb(145, 40, 40);
     font-size: 16px;
     cursor: pointer;
 }
 
 #add-button:hover {
-    background-color: rgb(155, 35, 35);
+    background-color: rgb(155, 40, 40);
 }
 
 #add-button:active {
-    background-color: rgb(165, 35, 35);
+    background-color: rgb(165, 40, 40);
 }
 
 ul li {
     display: flex;
     align-items: center;
     list-style: none;
-    margin: 0 10px 10px;
+    margin: 0 20px 10px;
     padding-left: 15px;
     border-radius: 30px;
-    background-color: rgb(170, 145, 55);
+    background-color: rgb(165, 140, 50);
     font-size: 16px;
     text-align: left;
 }

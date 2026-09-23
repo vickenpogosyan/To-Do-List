@@ -4,6 +4,7 @@ const list = document.getElementById("list");
 function addTask() {
     if (input.value.trim() === "") {
         alert("Enter a task!");
+        input.focus();
         return;
     }
     const newTask = document.createElement("li");
@@ -41,13 +42,13 @@ input.addEventListener("keydown", function (event) {
 });
 
 list.addEventListener("click", function (event) {
+    const task = event.target.closest("li");
+    
     if (event.target.className === "edit-button") {
-        const task = event.target.closest("li");
         const taskText = task.querySelector("span");
         editTask(taskText);
     }
     if (event.target.className === "done-button") {
-        const task = event.target.closest("li");
         doneTask(task);
     }
 });
