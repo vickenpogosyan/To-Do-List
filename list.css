@@ -78,6 +78,10 @@ ul li {
     text-align: left;
 }
 
+ul li span {
+    overflow-wrap: anywhere;
+}
+
 .list-buttons {
     display: flex;
     margin-left: auto;    /* move unused space to the left - buttons get pushed to the right */
